@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         "custom-black": "#000000",
         "custom-white": "#FFFFFF",
+        "custom-gray": "#8B888C",
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
