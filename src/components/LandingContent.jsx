@@ -19,7 +19,7 @@ export default function LandingContent() {
         <div className="overflow-hidden w-1/2">
           <img className="rounded-3xl" src={mainImg} alt="" />
         </div>
-        <div className=" bg-custom-black w-1/2 rounded-3xl p-[4rem] flex flex-col gap-[3rem]">
+        <div className=" bg-custom-black w-1/2 rounded-3xl p-[4rem] flex flex-col gap-[2.7rem]">
           <p className="text-[3.5rem]">Grand Theft Auto VI</p>
           <p className="text-[1.4rem]">
             GTA 6 may feature multiple locations, including a modern-day version
@@ -32,7 +32,7 @@ export default function LandingContent() {
             in technology, GTA 6 promises to deliver stunning visuals, realistic
             physics, and seamless gameplay experiences.
           </p>
-          <div className="flex flex-col gap-[2rem]">
+          <div className="flex flex-col gap-[1.8rem]">
             <div>
               <p className="text-[3rem]">345 million</p>
               <p className="text-[1rem] text-custom-gray">
