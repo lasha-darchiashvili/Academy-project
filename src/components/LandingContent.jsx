@@ -1,5 +1,6 @@
 import React from "react";
 import mainImg from "../assets/main-gta-picture.PNG";
+import GameStats from "./GameStats";
 
 export default function LandingContent() {
   return (
@@ -33,24 +34,18 @@ export default function LandingContent() {
             physics, and seamless gameplay experiences.
           </p>
           <div className="flex flex-col gap-[1.8rem]">
-            <div>
-              <p className="text-[3rem]">345 million</p>
-              <p className="text-[1rem] text-custom-gray">
-                GTA Series Total Copies Sold
-              </p>
-            </div>
-            <div>
-              <p className="text-[3rem]">$8.5 billion</p>
-              <p className="text-[1rem] text-custom-gray">
-                GTA V Total Revenue
-              </p>
-            </div>
-            <div>
-              <p className="text-[3rem]">$800 million</p>
-              <p className="text-[1rem] text-custom-gray">
-                GTA V Launch day Revenue
-              </p>
-            </div>
+            <GameStats
+              statistics="345 million"
+              statsDescription="GTA Series Total Copies Sold"
+            />
+            <GameStats
+              statistics="$8.5 billion"
+              statsDescription="GTA V Total Revenue"
+            />
+            <GameStats
+              statistics="$800 million"
+              statsDescription="GTA V Launch day Revenue"
+            />
           </div>
         </div>
       </div>
