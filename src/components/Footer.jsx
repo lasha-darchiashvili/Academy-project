@@ -2,25 +2,28 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="h-[20rem] bg-custom-blue mt-[5rem] text-custom-gray flex justify-center">
+    <footer className=" bg-custom-blue mt-[3rem] text-custom-gray flex justify-center">
       <div className="w-5/6 mt-[2rem]">
         <div className="flex justify-between">
           <div className="flex gap-[5em]">
-            <ul className="font-semibold text-[1.4rem]">
+            <ul className="font-semibold text-[1rem]">
               <li>
-                <a href="#">Home</a>
+                <a href="#">Games</a>
               </li>
               <li>
-                <a href="#">About</a>
+                <a href="#">News</a>
               </li>
               <li>
-                <a href="#">Services</a>
+                <a href="#">Videos</a>
               </li>
               <li>
-                <a href="#">Contact</a>
+                <a href="#">Store</a>
+              </li>
+              <li>
+                <a href="#">Support</a>
               </li>
             </ul>
-            <ul className="font-semibold text-[1.4rem]">
+            <ul className="font-semibold text-[1rem]">
               <li>
                 <a href="#">Pokestar connect</a>
               </li>
@@ -28,7 +31,7 @@ export default function Footer() {
                 <a href="#">Help</a>
               </li>
             </ul>
-            <ul className="font-semibold text-[1.4rem]">
+            <ul className="font-semibold text-[1rem]">
               <li>
                 <a href="#">Investors</a>
               </li>
@@ -36,7 +39,7 @@ export default function Footer() {
                 <a href="#">Press</a>
               </li>
             </ul>
-            <ul className="font-semibold text-[1.4rem]">
+            <ul className="font-semibold text-[1rem]">
               <li>
                 <a href="#">Company</a>
               </li>
@@ -49,7 +52,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="">
-            <h3 className="text-xl font-bold mb-[1rem]">
+            <h3 className="text-[1rem] font-bold mb-[1rem]">
               Subscribe to Our Newsletter
             </h3>
             <form>
@@ -69,7 +72,7 @@ export default function Footer() {
             </form>
           </div>
         </div>
-        <div className="flex justify-between mt-[5rem]">
+        <div className="flex justify-between mt-[3rem] mb-[1rem]">
           <p>&copy; 2024 Pokestar. All rights reserved.</p>
           <div className="flex gap-[1rem]">
             <a href="#">Privacy Policy</a>
