@@ -8,6 +8,7 @@ module.exports = {
         "custom-white": "#FFFFFF",
         "custom-gray": "#8B888C",
         "custom-blue": "#1A161F",
+        "custom-brown": "#2E2938",
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
