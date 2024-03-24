@@ -1,5 +1,6 @@
 import React from "react";
 import Mainlogo from "../assets/Mainlogo.svg";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -7,14 +8,17 @@ export default function Header() {
       <div className="flex justify-between items-center w-5/6 text-custom-white font-semibold">
         <div className="flex justify-center items-center gap-[2rem]">
           <img src={Mainlogo} alt="mainlogo" />
-          <p className="text-[2rem]">Pokestar</p>
+
+          <Link to="/">
+            <p className="text-[2rem]">Pokestar</p>
+          </Link>
         </div>
         <div className="flex gap-[3em] text-[1.6rem] font-semibold">
-          <a href="#">Games</a>
-          <a href="#">News</a>
-          <a href="#">Videos</a>
-          <a href="#">Store</a>
-          <a href="#">Support</a>
+          <Link to="#">Games</Link>
+          <Link to="#">News</Link>
+          <Link to="#">Videos</Link>
+          <Link to="#">Store</Link>
+          <Link to="/contact">Contact</Link>
         </div>
       </div>
     </nav>
