@@ -3,7 +3,7 @@ import React from "react";
 export default function Product({ name, description, image }) {
   return (
     <div class="bg-white rounded-lg p-4">
-      <div className="w-[20rem] mx-auto ">
+      <div className="max-w-[20rem] mx-auto ">
         <img className="rounded-lg" src={image} alt="productphoto" />
       </div>
       <div className="w-[20rem] mx-auto mt-[1rem]">
