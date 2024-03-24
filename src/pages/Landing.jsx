@@ -8,13 +8,11 @@ import SearchBar from "../components/SearchBar";
 
 export default function Landing() {
   return (
-    <div className="flex flex-col h-screen">
-      <Header />
+    <div className="grow overflow-hidden">
       {/* <LandingContent />
       <Upcoming /> */}
       <SearchBar />
       <Products />
-      <Footer />
     </div>
   );
 }

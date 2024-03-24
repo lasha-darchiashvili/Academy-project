@@ -10,8 +10,8 @@ export default function Products() {
     image: assassinImage,
   };
   return (
-    <div class="grow flex justify-center">
-      <div className="overflow-y-scroll h-[35rem] w-[124rem] mt-[1rem]">
+    <div class="flex justify-center">
+      <div className="overflow-y-scroll h-[34rem] w-[124rem] mt-[1rem]">
         <div class="grid grid-cols-5 gap-4 p-4">
           <Product
             name={gameData.name}
