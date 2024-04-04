@@ -16,7 +16,7 @@ export default function Header() {
         <div className="flex gap-[3em] text-[1.6rem] font-semibold">
           <Link href="#">Games</Link>
           <Link href="#">News</Link>
-          <Link href="/blog">Blog</Link>
+          <Link href="/blogs">Blog</Link>
           <Link href="/profile">Profile</Link>
           <Link href="/contact">Contact</Link>
         </div>
