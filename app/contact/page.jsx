@@ -1,6 +1,6 @@
 import React from "react";
-import ContactUs from "../components/ContactUs";
-import ContactInfo from "../components/ContactInfo";
+import ContactUs from "./components/ContactUs";
+import ContactInfo from "./components/ContactInfo";
 
 export default function Contact() {
   return (

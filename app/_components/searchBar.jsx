@@ -1,5 +1,5 @@
 import React from "react";
-import search from "../assets/search.svg";
+import search from "../../public/assets/search.svg";
 
 export default function SearchBar({ handleClick, onChange }) {
   return (
@@ -17,7 +17,7 @@ export default function SearchBar({ handleClick, onChange }) {
             className=" bg-slate-700 cursor-pointer w-[3rem] flex justify-center items-center rounded-xl"
             onClick={handleClick}
           >
-            <img src={search} alt="" />
+            <img src={search.src} alt="" />
           </button>
         </form>
       </div>

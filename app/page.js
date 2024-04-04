@@ -1,13 +1,11 @@
+"use client";
 import React from "react";
-import Header from "../components/Header";
-import LandingContent from "../components/LandingContent";
-import Footer from "../components/Footer";
-import Upcoming from "../components/Upcoming";
-import Products from "../components/Products";
-import SearchBar from "../components/SearchBar";
-import gameData from "../gamesdata";
+import Products from "./_components/products";
+import SearchBar from "./_components/searchBar";
+import gameData from "./gamesdata";
 import { useState } from "react";
-import useDebounce from "../hooks/useDebounce";
+import useDebounce from "./_hooks/useDebounce";
+import LandingContent from "./_components/landingContent";
 
 export default function Landing() {
   const [gamesDateForVisual, setGamesDateForVisual] = useState([

@@ -1,12 +1,12 @@
-import readMoreImg from "./assets/readmore.svg";
-import witcherImg from "./assets/witcher.jpg";
+import readMoreImg from "../public/assets/readmore.svg";
+import witcherImg from "../public/assets/witcher.jpg";
 const blogsData = [
   {
     id: 1,
     title: "The Witcher 3: Wild Hunt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, est dignissimos blanditiis possimus qui error illo perspiciatis, sit eos provident alias modi accusantium at nostrum! Repellendus eaque amet labore molestia.",
-    mainImage: witcherImg,
+    mainImage: witcherImg.src,
     createDate: new Date(),
     readMoreImage: readMoreImg,
   },
@@ -15,7 +15,7 @@ const blogsData = [
     title: "Red Dead Redemption 2",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, est dignissimos blanditiis possimus qui error illo perspiciatis, sit eos provident alias modi accusantium at nostrum! Repellendus eaque amet labore molestia.",
-    mainImage: witcherImg,
+    mainImage: witcherImg.src,
     createDate: new Date(),
     readMoreImage: readMoreImg,
   },
@@ -24,7 +24,7 @@ const blogsData = [
     title: "The Legend of Zelda: Breath of the Wild",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, est dignissimos blanditiis possimus qui error illo perspiciatis, sit eos provident alias modi accusantium at nostrum! Repellendus eaque amet labore molestia.",
-    mainImage: witcherImg,
+    mainImage: witcherImg.src,
     createDate: new Date(),
     readMoreImage: readMoreImg,
   },
@@ -33,7 +33,7 @@ const blogsData = [
     title: "Cyberpunk 2077",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, est dignissimos blanditiis possimus qui error illo perspiciatis, sit eos provident alias modi accusantium at nostrum! Repellendus eaque amet labore molestia.",
-    mainImage: witcherImg,
+    mainImage: witcherImg.src,
     createDate: new Date(),
     readMoreImage: readMoreImg,
   },
@@ -42,7 +42,7 @@ const blogsData = [
     title: "Bloodborne",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, est dignissimos blanditiis possimus qui error illo perspiciatis, sit eos provident alias modi accusantium at nostrum! Repellendus eaque amet labore molestia.",
-    mainImage: witcherImg,
+    mainImage: witcherImg.src,
     createDate: new Date(),
     readMoreImage: readMoreImg,
   },
@@ -51,7 +51,7 @@ const blogsData = [
     title: "Dark Souls III",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, est dignissimos blanditiis possimus qui error illo perspiciatis, sit eos provident alias modi accusantium at nostrum! Repellendus eaque amet labore molestia.",
-    mainImage: witcherImg,
+    mainImage: witcherImg.src,
     createDate: new Date(),
     readMoreImage: readMoreImg,
   },
@@ -60,7 +60,7 @@ const blogsData = [
     title: "Persona 5",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, est dignissimos blanditiis possimus qui error illo perspiciatis, sit eos provident alias modi accusantium at nostrum! Repellendus eaque amet labore molestia.",
-    mainImage: witcherImg,
+    mainImage: witcherImg.src,
     createDate: new Date(),
     readMoreImage: readMoreImg,
   },
@@ -69,7 +69,7 @@ const blogsData = [
     title: "Grand Theft Auto V",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, est dignissimos blanditiis possimus qui error illo perspiciatis, sit eos provident alias modi accusantium at nostrum! Repellendus eaque amet labore molestia.",
-    mainImage: witcherImg,
+    mainImage: witcherImg.src,
     createDate: new Date(),
     readMoreImage: readMoreImg,
   },
@@ -78,7 +78,7 @@ const blogsData = [
     title: "Final Fantasy VII Remake",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, est dignissimos blanditiis possimus qui error illo perspiciatis, sit eos provident alias modi accusantium at nostrum! Repellendus eaque amet labore molestia.",
-    mainImage: witcherImg,
+    mainImage: witcherImg.src,
     createDate: new Date(),
     readMoreImage: readMoreImg,
   },
@@ -87,7 +87,7 @@ const blogsData = [
     title: "Metal Gear Solid V: The Phantom Pain",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, est dignissimos blanditiis possimus qui error illo perspiciatis, sit eos provident alias modi accusantium at nostrum! Repellendus eaque amet labore molestia.",
-    mainImage: witcherImg,
+    mainImage: witcherImg.src,
     createDate: new Date(),
     readMoreImage: readMoreImg,
   },
@@ -96,7 +96,7 @@ const blogsData = [
     title: "Assassin's Creed Odyssey",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, est dignissimos blanditiis possimus qui error illo perspiciatis, sit eos provident alias modi accusantium at nostrum! Repellendus eaque amet labore molestia.",
-    mainImage: witcherImg,
+    mainImage: witcherImg.src,
     createDate: new Date(),
     readMoreImage: readMoreImg,
   },
@@ -105,7 +105,7 @@ const blogsData = [
     title: "Uncharted 4: A Thief's End",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, est dignissimos blanditiis possimus qui error illo perspiciatis, sit eos provident alias modi accusantium at nostrum! Repellendus eaque amet labore molestia.",
-    mainImage: witcherImg,
+    mainImage: witcherImg.src,
     createDate: new Date(),
     readMoreImage: readMoreImg,
   },
@@ -114,7 +114,7 @@ const blogsData = [
     title: "Hollow Knight",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, est dignissimos blanditiis possimus qui error illo perspiciatis, sit eos provident alias modi accusantium at nostrum! Repellendus eaque amet labore molestia.",
-    mainImage: witcherImg,
+    mainImage: witcherImg.src,
     createDate: new Date(),
     readMoreImage: readMoreImg,
   },
@@ -123,7 +123,7 @@ const blogsData = [
     title: "Bloodborne",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, est dignissimos blanditiis possimus qui error illo perspiciatis, sit eos provident alias modi accusantium at nostrum! Repellendus eaque amet labore molestia.",
-    mainImage: witcherImg,
+    mainImage: witcherImg.src,
     createDate: new Date(),
     readMoreImage: readMoreImg,
   },
@@ -132,7 +132,7 @@ const blogsData = [
     title: "Super Mario Odyssey",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, est dignissimos blanditiis possimus qui error illo perspiciatis, sit eos provident alias modi accusantium at nostrum! Repellendus eaque amet labore molestia.",
-    mainImage: witcherImg,
+    mainImage: witcherImg.src,
     createDate: new Date(),
     readMoreImage: readMoreImg,
   },
@@ -141,7 +141,7 @@ const blogsData = [
     title: "God of War (2018)",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, est dignissimos blanditiis possimus qui error illo perspiciatis, sit eos provident alias modi accusantium at nostrum! Repellendus eaque amet labore molestia.",
-    mainImage: witcherImg,
+    mainImage: witcherImg.src,
     createDate: new Date(),
     readMoreImage: readMoreImg,
   },
@@ -150,7 +150,7 @@ const blogsData = [
     title: "The Last of Us Part II",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, est dignissimos blanditiis possimus qui error illo perspiciatis, sit eos provident alias modi accusantium at nostrum! Repellendus eaque amet labore molestia.",
-    mainImage: witcherImg,
+    mainImage: witcherImg.src,
     createDate: new Date(),
     readMoreImage: readMoreImg,
   },
@@ -159,7 +159,7 @@ const blogsData = [
     title: "Sekiro: Shadows Die Twice",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, est dignissimos blanditiis possimus qui error illo perspiciatis, sit eos provident alias modi accusantium at nostrum! Repellendus eaque amet labore molestia.",
-    mainImage: witcherImg,
+    mainImage: witcherImg.src,
     createDate: new Date(),
     readMoreImage: readMoreImg,
   },
@@ -168,7 +168,7 @@ const blogsData = [
     title: "Persona 5 Royal",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, est dignissimos blanditiis possimus qui error illo perspiciatis, sit eos provident alias modi accusantium at nostrum! Repellendus eaque amet labore molestia.",
-    mainImage: witcherImg,
+    mainImage: witcherImg.src,
     createDate: new Date(),
     readMoreImage: readMoreImg,
   },
@@ -177,7 +177,7 @@ const blogsData = [
     title: "The Elder Scrolls V: Skyrim",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, est dignissimos blanditiis possimus qui error illo perspiciatis, sit eos provident alias modi accusantium at nostrum! Repellendus eaque amet labore molestia.",
-    mainImage: witcherImg,
+    mainImage: witcherImg.src,
     createDate: new Date(),
     readMoreImage: readMoreImg,
   },

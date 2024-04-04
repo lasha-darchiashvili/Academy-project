@@ -1,6 +1,5 @@
 import React from "react";
-import Product from "../components/Product";
-import assassinImage from "../assets/ac.webp";
+import Product from "./product";
 
 export default function Products({ gameData }) {
   return (

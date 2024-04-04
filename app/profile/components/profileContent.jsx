@@ -1,5 +1,6 @@
+"use client";
 import React from "react";
-import ProfileInput from "./ProfileInput";
+import ProfileInput from "./profileInput";
 import { useState } from "react";
 
 export default function ProfileContent() {
