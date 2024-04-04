@@ -5,6 +5,7 @@ import SearchBar from "./_components/searchBar";
 import gameData from "./gamesdata";
 import { useState } from "react";
 import useDebounce from "./_hooks/useDebounce";
+import LandingContent from "./_components/landingContent";
 
 export default function Landing() {
   const [gamesDateForVisual, setGamesDateForVisual] = useState([
