@@ -9,9 +9,10 @@ export default function Products({ gameData }) {
           {gameData?.map((game) => (
             <Product
               key={game.id}
-              name={game.name}
+              id={game.id}
+              name={game.title}
               description={game.description}
-              image={game.image}
+              image={game.thumbnail}
             />
           ))}
         </div>
