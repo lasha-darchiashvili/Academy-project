@@ -1,10 +1,10 @@
 import React from "react";
-import Upcoming from "./components/Upcoming";
+import Upcomingall from "./components/upcomingall";
 
 export default function BlogsPage() {
   return (
     <div className="grow">
-      <Upcoming />
+      <Upcomingall />
     </div>
   );
 }
