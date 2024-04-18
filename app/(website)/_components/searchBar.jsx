@@ -1,5 +1,5 @@
 import React from "react";
-import search from "../../public/assets/search.svg";
+import search from "../../../public/assets/search.svg";
 
 export default function SearchBar({ handleClick, onChange }) {
   return (

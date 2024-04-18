@@ -1,8 +1,24 @@
+"use server";
 import React from "react";
-import Mainlogo from "../../public/assets/Mainlogo.svg";
+import Mainlogo from "../../../public/assets/Mainlogo.svg";
 import Link from "next/link";
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
+import HeaderButton from "./headerButton";
 
-export default function Header() {
+export default async function Header() {
+  const cookieStore = cookies();
+
+  const cookie = cookieStore.get("token");
+
+  const handleClick = () => {
+    "use server";
+
+    if (cookie) {
+      cookies().delete("token");
+      redirect("/login");
+    }
+  };
   return (
     <nav className="flex justify-center h-[10rem] bg-custom-black">
       <div className="flex justify-between items-center w-5/6 text-custom-white font-semibold">
@@ -20,6 +36,7 @@ export default function Header() {
           <Link href="/profile">Profile</Link>
           <Link href="/contact">Contact</Link>
         </div>
+        <HeaderButton handleClick={handleClick} />
       </div>
     </nav>
   );
