@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
-import Products from "../_components/products";
+import Products from "../_components/Products";
 import SearchBar from "../_components/searchBar";
-import gameData from "../gamesdata";
 import { useState, useEffect } from "react";
 import useDebounce from "../_hooks/useDebounce";
 import LandingContent from "../_components/landingContent";

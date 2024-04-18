@@ -1,7 +1,7 @@
 import React from "react";
-import facebook from "../../../public/assets/facebook.svg";
-import linkedin from "../../../public/assets/linkedin.svg";
-import home from "../../../public/assets/home.svg";
+import facebook from "../../../../public/assets/facebook.svg";
+import linkedin from "../../../../public/assets/linkedin.svg";
+import home from "../../../../public/assets/home.svg";
 import Link from "next/link";
 
 export default function ContactInfo() {

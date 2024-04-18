@@ -1,5 +1,5 @@
 import React from "react";
-import mainImg from "../../public/assets/main-gta-picture.PNG";
+import mainImg from "../../../public/assets/main-gta-picture.PNG";
 import GameStats from "./GameStats";
 
 export default function LandingContent() {
