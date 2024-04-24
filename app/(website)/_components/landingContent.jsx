@@ -1,6 +1,7 @@
 import React from "react";
 import mainImg from "../../../public/assets/main-gta-picture.PNG";
 import GameStats from "./GameStats";
+import Image from "next/image";
 
 export default function LandingContent() {
   return (
@@ -18,7 +19,7 @@ export default function LandingContent() {
       </div>
       <div className="w-5/6 mt-[2rem] flex gap-[3rem]">
         <div className="overflow-hidden w-1/2">
-          <img className="rounded-3xl" src={mainImg.src} alt="" />
+          <Image className="rounded-3xl" src={mainImg.src} alt="" />
         </div>
         <div className=" bg-custom-black w-1/2 rounded-3xl p-[4rem] flex flex-col gap-[2.7rem]">
           <p className="text-[3.5rem]">Grand Theft Auto VI</p>

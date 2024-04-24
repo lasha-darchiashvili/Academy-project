@@ -5,7 +5,7 @@ import Link from "next/link";
 import "../../globals.css";
 import { useRouter } from "next/navigation";
 
-export default function loginFrom() {
+export default function LoginFrom() {
   const [password, setPassword] = useState({});
   const [username, setUsername] = useState(true);
   const [error, setError] = useState();

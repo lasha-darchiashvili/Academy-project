@@ -1,8 +1,9 @@
 "use client";
 import React from "react";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
-export default function page({ id }) {
+export default function BlogItem({ id }) {
   const [blogData, setBlogData] = useState();
   const [loading, setLoading] = useState(true);
 
@@ -37,7 +38,7 @@ export default function page({ id }) {
       <div className="flex flex-col gap-[2rem] items-center w-full mt-[3rem]">
         <div className="flex flex-row gap-[2rem] bg-custom-second-blue w-[120rem] rounded-2xl">
           <div className="w-3/5">
-            <img
+            <Image
               className="w-full"
               src="https://cdn1.epicgames.com/offer/14ee004dadc142faaaece5a6270fb628/EGS_TheWitcher3WildHuntCompleteEdition_CDPROJEKTRED_S1_2560x1440-82eb5cf8f725e329d3194920c0c0b64f"
               alt="photo"
@@ -49,9 +50,12 @@ export default function page({ id }) {
             <div>
               <p className="text-[1.8rem] text-gray-400 mb-[1rem]">tags</p>
               <div className="flex gap-[1rem] text-[1.4rem]">
-                {blogData.tags.map((item) => {
+                {blogData.tags.map((item, index) => {
                   return (
-                    <p className="text-[1.4rem] text-gray-400 bg-zinc-900 px-4 py-2 rounded-lg">
+                    <p
+                      key={index}
+                      className="text-[1.4rem] text-gray-400 bg-zinc-900 px-4 py-2 rounded-lg"
+                    >
                       {item}
                     </p>
                   );

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function ProductItem({ id }) {
@@ -38,7 +38,7 @@ export default function ProductItem({ id }) {
       <div className="flex flex-col gap-[2rem] items-center w-full mt-[3rem]">
         <div className="flex flex-row gap-[2rem] bg-custom-second-blue w-[120rem] rounded-2xl">
           <div className="w-3/5">
-            <img className="w-full" src={gameData?.thumbnail} alt="photo" />
+            <Image className="w-full" src={gameData?.thumbnail} alt="photo" />
           </div>
           <div className="w-2/5 flex flex-col gap-[2rem] mt-[3rem] text-white">
             <p className="text-[2rem] mt-[2rem] mb-[2rem]">{gameData?.title}</p>

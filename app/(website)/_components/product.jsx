@@ -1,10 +1,11 @@
 import React from "react";
+import Image from "next/image";
 
 export default function Product({ name, description, image, id }) {
   return (
     <div className="bg-white rounded-lg p-4 h-[32rem] flex flex-col ">
       <div className="max-w-[20rem] mx-auto h-[15rem]  overflow-hidden">
-        <img
+        <Image
           className="rounded-lg max-h-[15rem]"
           src={image}
           alt="productphoto"

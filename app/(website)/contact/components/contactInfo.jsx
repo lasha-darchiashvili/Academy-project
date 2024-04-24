@@ -3,6 +3,7 @@ import facebook from "../../../../public/assets/facebook.svg";
 import linkedin from "../../../../public/assets/linkedin.svg";
 import home from "../../../../public/assets/home.svg";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function ContactInfo() {
   return (
@@ -10,7 +11,7 @@ export default function ContactInfo() {
       <div className="grid grid-cols-2 gap-y-[6rem] gap-x-[4rem]">
         <div className="flex flex-col justify-center items-center gap-[0.5rem] w-max-[18rem]">
           <div className="mb-[1rem]">
-            <img className="w-[3rem]" src={home.src} alt="home" />
+            <Image className="w-[3rem]" src={home.src} alt="home" />
           </div>
           <p className="text-white font-bold text-[1.2rem]">
             {" "}
@@ -21,7 +22,7 @@ export default function ContactInfo() {
         </div>
         <div className="flex flex-col justify-center items-center gap-[0.5rem] w-max-[18rem]">
           <div className="mb-[1rem]">
-            <img className="w-[3rem]" src={home.src} alt="home" />
+            <Image className="w-[3rem]" src={home.src} alt="home" />
           </div>
           <p className="text-white font-bold text-[1.2rem]">
             {" "}
@@ -32,7 +33,7 @@ export default function ContactInfo() {
         </div>
         <div className="flex flex-col justify-center items-center gap-[0.5rem] w-max-[18rem]">
           <div className="mb-[1rem]">
-            <img className="w-[3rem]" src={facebook.src} alt="facebook" />
+            <Image className="w-[3rem]" src={facebook.src} alt="facebook" />
           </div>
           <p className="text-white font-bold text-[1.2rem]">
             {" "}
@@ -42,7 +43,7 @@ export default function ContactInfo() {
         </div>
         <div className="flex flex-col justify-center items-center gap-[0.5rem] w-max-[18rem]">
           <div className="mb-[1rem]">
-            <img className="w-[3rem]" src={linkedin.src} alt="linkedin" />
+            <Image className="w-[3rem]" src={linkedin.src} alt="linkedin" />
           </div>
           <p className="text-white font-bold text-[1.2rem]">
             {" "}

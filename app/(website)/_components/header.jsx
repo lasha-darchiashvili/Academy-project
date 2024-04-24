@@ -4,8 +4,9 @@ import Mainlogo from "../../../public/assets/Mainlogo.svg";
 import Link from "next/link";
 import { redirect, useRouter } from "next/navigation";
 import HeaderButton from "./headerButton";
+import Image from "next/image";
 
-export default async function Header() {
+export default function Header() {
   const router = useRouter();
 
   const handleLogout = () => {
@@ -36,7 +37,7 @@ export default async function Header() {
     <nav className="flex justify-center h-[10rem] bg-custom-black">
       <div className="flex justify-between items-center w-5/6 text-custom-white font-semibold">
         <div className="flex justify-center items-center gap-[2rem]">
-          <img src={Mainlogo.src} alt="mainlogo" />
+          <Image src={Mainlogo.src} alt="mainlogo" />
 
           <Link href="/">
             <p className="text-[2rem]">Pokestar</p>

@@ -1,11 +1,12 @@
 import React from "react";
+import Image from "next/image";
 
 export default function UpcomingGame({ title, img, text, id }) {
   return (
     <div className="flex flex-col gap-[2rem] items-center w-full">
       <div className="flex flex-row gap-[2rem]">
         <div className="w-3/5">
-          <img className="w-full" src={img} alt="witcher_photo" />
+          <Image className="w-full" src={img} alt="witcher_photo" />
         </div>
         <div className="w-2/5 flex flex-col gap-[2rem]">
           <p className="text-[1.8rem]">{title}</p>
