@@ -3,16 +3,36 @@ import React from "react";
 import { useState } from "react";
 import Link from "next/link";
 import "../../globals.css";
+import { useRouter } from "next/navigation";
 
-export default function loginFrom({ handleSignIn }) {
+export default function loginFrom() {
   const [password, setPassword] = useState({});
   const [username, setUsername] = useState(true);
   const [error, setError] = useState();
 
+  const router = useRouter();
+
   const handleLogin = (e) => {
     e.preventDefault();
-    handleSignIn(username, password);
+    fetch("/api/login", {
+      method: "POST",
+      body: JSON.stringify({
+        username,
+        password,
+      }),
+    })
+      .then(() => {
+        router.push("/landing");
+      })
+      .catch((error) => {
+        console.error("Failed to log in:", error);
+      });
   };
+
+  // const handleLogin = (e) => {
+  //   e.preventDefault();
+  //   handleSignIn(username, password);
+  // };
 
   return (
     <form

@@ -1,24 +1,37 @@
-"use server";
+"use client";
 import React from "react";
 import Mainlogo from "../../../public/assets/Mainlogo.svg";
 import Link from "next/link";
-import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 import HeaderButton from "./headerButton";
 
 export default async function Header() {
-  const cookieStore = cookies();
+  const router = useRouter();
 
-  const cookie = cookieStore.get("token");
-
-  const handleClick = () => {
-    "use server";
-
-    if (cookie) {
-      cookies().delete("token");
-      redirect("/login");
-    }
+  const handleLogout = () => {
+    fetch("/api/logout", {
+      method: "POST",
+    })
+      .then(() => {
+        router.push("/login");
+      })
+      .catch((error) => {
+        console.error("Failed to log out:", error);
+      });
   };
+
+  // const handleClick = async () => {
+  //   "use server";
+
+  //   const response = await fetch("http://localhost:3000/api/logout", {
+  //     method: "POST",
+  //   });
+
+  //   if (cookie) {
+  //     cookies().delete("token");
+  //     redirect("/login");
+  //   }
+  // };
   return (
     <nav className="flex justify-center h-[10rem] bg-custom-black">
       <div className="flex justify-between items-center w-5/6 text-custom-white font-semibold">
@@ -36,7 +49,7 @@ export default async function Header() {
           <Link href="/profile">Profile</Link>
           <Link href="/contact">Contact</Link>
         </div>
-        <HeaderButton handleClick={handleClick} />
+        <HeaderButton handleLogout={handleLogout} />
       </div>
     </nav>
   );
