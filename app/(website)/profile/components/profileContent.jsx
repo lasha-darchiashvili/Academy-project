@@ -45,7 +45,7 @@ export default function ProfileContent() {
     <div onSubmit={handleSubmit} className="flex justify-center mt-[6rem]">
       <div className="w-[120rem] bg-custom-second-blue flex gap-[10rem] px-[6rem] py-[6rem] rounded-xl text-gray-400">
         <div className="overflow-hidden w-[20rem] ">
-          <Image
+          <img
             className="w-[20rem] rounded-xl"
             src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg"
             alt=""

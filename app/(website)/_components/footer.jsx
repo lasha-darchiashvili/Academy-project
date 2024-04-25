@@ -1,6 +1,9 @@
+"use client";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation();
   return (
     <footer className=" bg-custom-blue mt-[3rem] text-custom-gray flex justify-center">
       <div className="w-5/6 mt-[2rem]">
@@ -8,75 +11,75 @@ export default function Footer() {
           <div className="flex gap-[5em]">
             <ul className="font-semibold text-[1rem]">
               <li>
-                <a href="#">Games</a>
+                <a href="#">{t("footerGames")}</a>
               </li>
               <li>
-                <a href="#">News</a>
+                <a href="#">{t("footerNews")}</a>
               </li>
               <li>
-                <a href="#">Videos</a>
+                <a href="#">{t("footerVideos")}</a>
               </li>
               <li>
-                <a href="#">Store</a>
+                <a href="#">{t("footerStore")}</a>
               </li>
               <li>
-                <a href="#">Support</a>
-              </li>
-            </ul>
-            <ul className="font-semibold text-[1rem]">
-              <li>
-                <a href="#">Pokestar connect</a>
-              </li>
-              <li>
-                <a href="#">Help</a>
+                <a href="#">{t("footerSupport")}</a>
               </li>
             </ul>
             <ul className="font-semibold text-[1rem]">
               <li>
-                <a href="#">Investors</a>
+                <a href="#">{t("footerPokestarConnect")}</a>
               </li>
               <li>
-                <a href="#">Press</a>
+                <a href="#">{t("footerHelp")}</a>
               </li>
             </ul>
             <ul className="font-semibold text-[1rem]">
               <li>
-                <a href="#">Company</a>
+                <a href="#">{t("footerInvestors")}</a>
               </li>
               <li>
-                <a href="#">Careers</a>
+                <a href="#">{t("footerPress")}</a>
+              </li>
+            </ul>
+            <ul className="font-semibold text-[1rem]">
+              <li>
+                <a href="#">{t("footerCompany")}</a>
               </li>
               <li>
-                <a href="#">Locations</a>
+                <a href="#">{t("footerCareers")}</a>
+              </li>
+              <li>
+                <a href="#">{t("footerLocations")}</a>
               </li>
             </ul>
           </div>
           <div className="">
             <h3 className="text-[1rem] font-bold mb-[1rem]">
-              Subscribe to Our Newsletter
+              {t("footerSubscribeToOurNewsletter")}
             </h3>
             <form>
               <div className="flex items-center">
                 <input
                   type="email"
-                  placeholder="Your Email"
+                  placeholder={t("footerYourEmail")}
                   className="mr-2 py-2 px-3 bg-gray-700 text-white rounded-md focus:outline-none focus:bg-gray-600"
                 />
                 <button
                   type="submit"
                   className="py-2 px-4 bg-gray-500 text-white rounded-md hover:bg-gray-700 focus:outline-none"
                 >
-                  Subscribe
+                  {t("footerSubscribe")}
                 </button>
               </div>
             </form>
           </div>
         </div>
         <div className="flex justify-between mt-[3rem] mb-[1rem]">
-          <p>&copy; 2024 Pokestar. All rights reserved.</p>
+          <p>{t("footerCopyRight")}</p>
           <div className="flex gap-[1rem]">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms & Conditions</a>
+            <a href="#">{t("footerPrivacyPolicy")}</a>
+            <a href="#">{t("footerTermsAndConditions")}</a>
           </div>
         </div>
       </div>

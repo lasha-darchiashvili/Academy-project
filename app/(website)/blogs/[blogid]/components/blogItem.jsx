@@ -2,10 +2,12 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function BlogItem({ id }) {
   const [blogData, setBlogData] = useState();
   const [loading, setLoading] = useState(true);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const fetchData = () => {
@@ -30,7 +32,7 @@ export default function BlogItem({ id }) {
   if (loading) {
     return (
       <div className="flex justify-center items-center">
-        <div className="text-[3rem] text-red-500">Loading...</div>
+        <div className="text-[3rem] text-red-500">{t("Loading")}</div>
       </div>
     );
   } else {
@@ -38,7 +40,7 @@ export default function BlogItem({ id }) {
       <div className="flex flex-col gap-[2rem] items-center w-full mt-[3rem]">
         <div className="flex flex-row gap-[2rem] bg-custom-second-blue w-[120rem] rounded-2xl">
           <div className="w-3/5">
-            <Image
+            <img
               className="w-full"
               src="https://cdn1.epicgames.com/offer/14ee004dadc142faaaece5a6270fb628/EGS_TheWitcher3WildHuntCompleteEdition_CDPROJEKTRED_S1_2560x1440-82eb5cf8f725e329d3194920c0c0b64f"
               alt="photo"
