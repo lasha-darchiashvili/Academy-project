@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export default function UpcomingGame({ title, img, text, id }) {
   return (

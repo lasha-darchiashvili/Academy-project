@@ -1,6 +1,7 @@
 import React from "react";
 import mainImg from "../../../public/assets/main-gta-picture.PNG";
 import GameStats from "./GameStats";
+import Image from "next/image";
 
 export default function LandingContent() {
   return (

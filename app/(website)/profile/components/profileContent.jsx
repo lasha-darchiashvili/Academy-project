@@ -2,6 +2,7 @@
 import React from "react";
 import ProfileInput from "./profileInput";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function ProfileContent() {
   const [formData, setFormData] = useState({

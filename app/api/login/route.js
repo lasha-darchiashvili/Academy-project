@@ -1,8 +1,9 @@
 import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
 
-// this service is no longer used anywhere ----------------------------------------------------------------
-export async function login(username, password) {
+export async function POST(request, res) {
+  const { username, password } = await request.json();
+  console.log(username, password);
+
   try {
     const response = await fetch("https://dummyjson.com/auth/login", {
       method: "POST",
@@ -13,17 +14,14 @@ export async function login(username, password) {
         expiresInMins: 30,
       }),
     });
-
-    if (!response.ok) {
-      throw new Error("Login failed");
-    }
-
     const user = await response.json();
+
     const cookieStore = cookies();
     cookieStore.set("token", user.token);
-
-    return user;
+    console.log(cookieStore, "route");
+    return new Response("login succesful", { status: 200 });
   } catch (error) {
-    throw new Error("Login failed");
+    console.log(error);
+    return new Response("login unsuccesful", { status: 500 });
   }
 }

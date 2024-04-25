@@ -2,9 +2,11 @@
 import React from "react";
 import UpcomingGam from "./upcomingGam";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Upcoming() {
   const [blogsData, setBlogsData] = useState([]);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const fetchData = () => {
@@ -24,7 +26,7 @@ export default function Upcoming() {
 
   return (
     <div className="flex items-center flex-col text-custom-white mt-[4rem] gap-[4rem]">
-      <p className="text-custom-white text-[2.4rem]">Upcoming Games</p>
+      <p className="text-custom-white text-[2.4rem]">{t("UpcomingGames")}</p>
       <div className="w-[120rem] flex flex-col gap-[5rem] items-center">
         {blogsData.map((game) => (
           <UpcomingGam

@@ -1,6 +1,10 @@
+"use client";
 import React from "react";
+import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function Product({ name, description, image, id }) {
+  const { t } = useTranslation();
   return (
     <div className="bg-white rounded-lg p-4 h-[32rem] flex flex-col ">
       <div className="max-w-[20rem] mx-auto h-[15rem]  overflow-hidden">
@@ -18,7 +22,7 @@ export default function Product({ name, description, image, id }) {
         href={`/landing/${id}`}
         className="w-full block bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-700 focus:outline-none mt-auto"
       >
-        Add to Cart
+        {t("addToCard")}
       </a>
     </div>
   );
