@@ -50,7 +50,9 @@ export default function BlogItem({ id }) {
             <p className="text-[2rem] mt-[2rem] mb-[2rem]">{blogData?.title}</p>
             <p>{blogData?.body}</p>
             <div>
-              <p className="text-[1.8rem] text-gray-400 mb-[1rem]">tags</p>
+              <p className="text-[1.8rem] text-gray-400 mb-[1rem]">
+                {t("tags")}
+              </p>
               <div className="flex gap-[1rem] text-[1.4rem]">
                 {blogData.tags.map((item, index) => {
                   return (
@@ -66,7 +68,7 @@ export default function BlogItem({ id }) {
             </div>
             <div>
               <p className="text-[1.4rem] text-gray-400">
-                reactions: {blogData?.reactions}
+                {t("reactions")}: {blogData?.reactions}
               </p>
             </div>
 
@@ -75,7 +77,7 @@ export default function BlogItem({ id }) {
                 className="bg-gray-500 block w-[10rem] ml-auto text-white px-4 py-2 rounded-md hover:bg-gray-700 focus:outline-none mb-[1rem] mr-[1rem]"
                 href="/blogs"
               >
-                Go Back
+                {t("goback")}
               </a>
             </div>
           </div>

@@ -1,7 +1,9 @@
 import React from "react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function UpcomingGame({ title, img, text, id }) {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col gap-[2rem] items-center w-full">
       <div className="flex flex-row gap-[2rem]">
@@ -22,7 +24,7 @@ export default function UpcomingGame({ title, img, text, id }) {
       </div>
       <div className="flex gap-[2rem] items-center">
         <p className="text-[1.4rem] font-semibold">
-          <a href={`/blogs/${id}`}>Read more</a>
+          <a href={`/blogs/${id}`}>{t("readmore")}</a>
         </p>
       </div>
     </div>
