@@ -76,7 +76,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex justify-between mt-[3rem] mb-[1rem]">
-          <p>{t("footerCopyRight")}</p>
+          <p>&copy; {t("footerCopyRight")}</p>
           <div className="flex gap-[1rem]">
             <a href="#">{t("footerPrivacyPolicy")}</a>
             <a href="#">{t("footerTermsAndConditions")}</a>

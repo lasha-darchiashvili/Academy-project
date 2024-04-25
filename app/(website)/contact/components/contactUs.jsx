@@ -1,15 +1,20 @@
 "use client";
 import React from "react";
 
+import { useTranslation } from "react-i18next";
+
 export default function ContactUs() {
+  const { t } = useTranslation();
   return (
     <div className="w-[40rem]">
       <div className="flex flex-col">
-        <p className="font-semibold text-[1.8em] text-white ">Contact</p>
+        <p className="font-semibold text-[1.8em] text-white ">
+          {t("ContactUsContact")}
+        </p>
         <div className=" w-[75%] h-[0.5em] mx-0 "></div>
       </div>
       <p className="mb-4 font-semibold text-[1.2em] text-custom-gray">
-        Want to work together? Let us know!
+        {t("ContactUsWorkTogether")}
       </p>
       <form
         className=""
@@ -21,7 +26,7 @@ export default function ContactUs() {
             className="text-[1.2em] shadow appearance-none  rounded w-full py-4 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-custom-brown"
             id="username"
             type="text"
-            placeholder="Username"
+            placeholder={t("ContactUsUsername")}
             name="name"
             required
           />
@@ -31,7 +36,7 @@ export default function ContactUs() {
             className=" text-[1.2em]  shadow appearance-none  rounded w-full py-4 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-custom-brown"
             id="email"
             type="email"
-            placeholder="Email"
+            placeholder={t("ContactUsEmail")}
             name="email"
             required
           />
@@ -42,7 +47,7 @@ export default function ContactUs() {
             id="message"
             rows="6"
             name="textarea"
-            placeholder="Enter your message"
+            placeholder={t("ContactUsYourMessage")}
           ></textarea>
         </div>
         <div className="flex items-center justify-center mt-[2em]">
@@ -51,7 +56,7 @@ export default function ContactUs() {
             className="border border-solid rounded-md text-white text-[2.4em] hover:bg-gray-700 hover:text-custom-gray transition-all duration-500 font-bold py-2 px-8 rounded focus:outline-none focus:shadow-outline"
             type="submit"
           >
-            SUBMIT
+            {t("ContactUsSubmit")}
           </button>
         </div>
       </form>

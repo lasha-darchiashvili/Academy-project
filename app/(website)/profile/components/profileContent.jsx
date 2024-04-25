@@ -3,8 +3,10 @@ import React from "react";
 import ProfileInput from "./profileInput";
 import { useState } from "react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function ProfileContent() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "James",
     surname: "Rodrigues",
@@ -53,59 +55,59 @@ export default function ProfileContent() {
         </div>
         <form action="" className="flex flex-col gap-[1.5rem] grow">
           <ProfileInput
-            title="Name"
+            title={t("profileContentNameTitle")}
             onChange={handleInputChange}
             value={formData.name}
             name="name"
             type="text"
-            placeholder="Enter User Name"
+            placeholder={t("profileContentNamePlaceholder")}
           />
           <ProfileInput
-            title="Surname"
+            title={t("profileContentSurnameTitle")}
             onChange={handleInputChange}
             value={formData.surname}
             name="surname"
             type="text"
-            placeholder="Enter User Surname"
+            placeholder={t("profileContentSurnamePlaceholder")}
           />
           <ProfileInput
-            title="Email"
+            title={t("profileContentEmailTitle")}
             onChange={handleInputChange}
             value={formData.email}
             name="email"
             type="email"
-            placeholder="Enter User Email"
+            placeholder={t("profileContentEmailPlaceholder")}
           />
           <ProfileInput
-            title="Phone Number"
+            title={t("profileContentPhoneNumberTitle")}
             onChange={handleInputChange}
             value={formData.number}
             name="number"
             type="number"
-            placeholder="Enter User Phone Number"
+            placeholder={t("profileContentPhoneNumberPlaceholder")}
           />
 
           <div className="flex gap-[2rem] mt-[2rem]">
             <ProfileInput
-              title="New password"
+              title={t("profileContentNewPasswordTitle")}
               onChange={handleInputChange}
               value={formData.password}
               name="password"
               type="password"
-              placeholder="Enter password"
+              placeholder={t("profileContentNewPasswordPlaceholder")}
             />
             <ProfileInput
-              title="Confirm password"
+              title={t("profileContentConfirmPasswordTitle")}
               onChange={handleInputChange}
               value={formData.confirmPassword}
               name="confirmPassword"
               type="password"
-              placeholder="password"
+              placeholder={t("profileContentConfirmPasswordPlaceholder")}
             />
           </div>
           {passwordsNotMatch ? (
             <p className="text-red-500 text-[1.6rem]">
-              Passwords does not match
+              {t("profileContentPasswordsMismatch")}
             </p>
           ) : (
             ""
@@ -115,7 +117,7 @@ export default function ProfileContent() {
             type="submit"
             className=" bg-gray-300 px-[2rem] py-[1rem] w-[15rem] rounded-xl mt-[4rem] text-[1.4rem] text-black"
           >
-            Submit
+            {t("profileContentSubmitButton")}
           </button>
         </form>
       </div>
