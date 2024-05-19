@@ -1,13 +1,22 @@
 import React from "react";
 
-export default function ProfileInput({
+interface ProfileInputProps {
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  value: string;
+  name: string;
+  type: string;
+  placeholder: string;
+  title: string;
+}
+
+const ProfileInput: React.FC<ProfileInputProps> = ({
   onChange,
   value,
   name,
   type,
   placeholder,
   title,
-}) {
+}) => {
   return (
     <div className="flex flex-col gap-[1rem]">
       <label className="block text-gray-400 text-[1.6rem] font-semibold">
@@ -24,4 +33,6 @@ export default function ProfileInput({
       <hr className="border-gray-400" />
     </div>
   );
-}
+};
+
+export default ProfileInput;

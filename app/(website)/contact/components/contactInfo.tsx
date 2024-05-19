@@ -4,10 +4,9 @@ import facebook from "../../../../public/assets/facebook.svg";
 import linkedin from "../../../../public/assets/linkedin.svg";
 import home from "../../../../public/assets/home.svg";
 import Link from "next/link";
-import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
-export default function ContactInfo() {
+const ContactInfo: React.FC = () => {
   const { t } = useTranslation();
 
   return (
@@ -66,4 +65,6 @@ export default function ContactInfo() {
       </div>
     </div>
   );
-}
+};
+
+export default ContactInfo;

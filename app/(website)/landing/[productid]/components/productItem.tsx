@@ -4,10 +4,26 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-export default function ProductItem({ id }) {
+interface Product {
+  id: string;
+  title: string;
+  description: string;
+  thumbnail: string;
+  price: number;
+  discountPercentage: number;
+  rating: number;
+  brand: string;
+  category: string;
+}
+
+interface ProductItemProps {
+  id: string;
+}
+
+const ProductItem: React.FC<ProductItemProps> = ({ id }) => {
   const { t } = useTranslation();
-  const [gameData, setGameData] = useState();
-  const [loading, setLoading] = useState(true);
+  const [gameData, setGameData] = useState<Product | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const fetchData = () => {
@@ -84,4 +100,6 @@ export default function ProductItem({ id }) {
       </div>
     );
   }
-}
+};
+
+export default ProductItem;

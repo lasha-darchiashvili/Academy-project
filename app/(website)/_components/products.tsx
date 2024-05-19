@@ -1,7 +1,18 @@
 import React from "react";
 import Product from "./product";
 
-export default function Products({ gameData }) {
+interface GameData {
+  id: string;
+  title: string;
+  description: string;
+  thumbnail: string;
+}
+
+interface ProductsProps {
+  gameData: GameData[];
+}
+
+const Products: React.FC<ProductsProps> = ({ gameData }) => {
   return (
     <div className="flex justify-center">
       <div className="overflow-y-scroll h-[34rem] w-[124rem] mt-[1rem]">
@@ -19,4 +30,6 @@ export default function Products({ gameData }) {
       </div>
     </div>
   );
-}
+};
+
+export default Products;

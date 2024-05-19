@@ -3,7 +3,7 @@ import React from "react";
 
 import { useTranslation } from "react-i18next";
 
-export default function ContactUs() {
+const ContactUs: React.FC = () => {
   const { t } = useTranslation();
   return (
     <div className="w-[40rem]">
@@ -45,7 +45,7 @@ export default function ContactUs() {
           <textarea
             className=" text-[1.2em]  shadow appearance-none  rounded w-full py-4 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-custom-brown"
             id="message"
-            rows="6"
+            rows={6}
             name="textarea"
             placeholder={t("ContactUsYourMessage")}
           ></textarea>
@@ -62,4 +62,6 @@ export default function ContactUs() {
       </form>
     </div>
   );
-}
+};
+
+export default ContactUs;

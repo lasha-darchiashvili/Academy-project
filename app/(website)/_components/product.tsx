@@ -3,7 +3,14 @@ import React from "react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
-export default function Product({ name, description, image, id }) {
+interface ProductProps {
+  name: string;
+  description: string;
+  image: string;
+  id: string;
+}
+
+const Product: React.FC<ProductProps> = ({ name, description, image, id }) => {
   const { t } = useTranslation();
   return (
     <div className="bg-white rounded-lg p-4 h-[32rem] flex flex-col ">
@@ -26,4 +33,6 @@ export default function Product({ name, description, image, id }) {
       </a>
     </div>
   );
-}
+};
+
+export default Product;
