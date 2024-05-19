@@ -2,9 +2,13 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-export default function headerButton({ handleLogout }) {
+interface Props {
+  handleLogout: () => void;
+}
+
+const HeaderButton: React.FC<Props> = ({ handleLogout }) => {
   const { t } = useTranslation();
-  const handleClick = (e) => {
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     handleLogout();
   };
@@ -18,4 +22,6 @@ export default function headerButton({ handleLogout }) {
       </button>
     </div>
   );
-}
+};
+
+export default HeaderButton;

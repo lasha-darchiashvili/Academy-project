@@ -4,7 +4,12 @@ import search from "../../../public/assets/search.svg";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
-export default function SearchBar({ handleClick, onChange }) {
+interface SearchBarProps {
+  handleClick: () => void;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+const SearchBar: React.FC<SearchBarProps> = ({ handleClick, onChange }) => {
   const { t } = useTranslation();
   return (
     <div className="w-full flex justify-center mt-[2rem]">
@@ -27,4 +32,6 @@ export default function SearchBar({ handleClick, onChange }) {
       </div>
     </div>
   );
-}
+};
+
+export default SearchBar;

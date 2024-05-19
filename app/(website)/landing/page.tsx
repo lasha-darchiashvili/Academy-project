@@ -1,15 +1,22 @@
 "use client";
 import React from "react";
-import Products from "../_components/Products";
+import Products from "../_components/products";
 import SearchBar from "../_components/searchBar";
 import { useState, useEffect } from "react";
 import useDebounce from "../_hooks/useDebounce";
 import LandingContent from "../_components/landingContent";
 
-export default function Landing() {
-  const [gamesDateForVisual, setGamesDateForVisual] = useState([]);
-  const [isSorted, setIsSorted] = useState(true);
-  const [searchItem, setSearchItem] = useState("");
+interface Product {
+  id: string;
+  title: string;
+  description: string;
+  thumbnail: string;
+}
+
+const Landing: React.FC = () => {
+  const [gamesDateForVisual, setGamesDateForVisual] = useState<Product[]>([]);
+  const [isSorted, setIsSorted] = useState<boolean>(true);
+  const [searchItem, setSearchItem] = useState<string>("");
 
   const debouncedSearch = useDebounce(searchItem, 500);
 
@@ -41,13 +48,12 @@ export default function Landing() {
     );
 
   // set serached item's name to searchItem state
-  const onChange = (e) => {
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchItem(e.target.value);
   };
 
   // if isSorted is true sort ascending if not sort descending
-  const handleClick = (e) => {
-    e.preventDefault();
+  const handleClick = () => {
     if (!isSorted) {
       sortedAndFilteredData = gamesDateForVisual.sort((a, b) =>
         a.id > b.id ? 1 : -1
@@ -60,6 +66,7 @@ export default function Landing() {
       setIsSorted(false);
     }
   };
+
   console.log("asdasdasd");
 
   return (
@@ -70,4 +77,6 @@ export default function Landing() {
       <Products gameData={sortedAndFilteredData} />
     </div>
   );
-}
+};
+
+export default Landing;

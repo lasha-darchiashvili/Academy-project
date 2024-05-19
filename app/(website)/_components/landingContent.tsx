@@ -1,9 +1,8 @@
 import React from "react";
-import mainImg from "../../../public/assets/main-gta-picture.PNG";
-import GameStats from "./GameStats";
+import GameStats from "./gameStats";
 import Image from "next/image";
 
-export default function LandingContent() {
+const LandingContent: React.FC = () => {
   return (
     <main className="flex items-center flex-col text-custom-white mt-[2rem]">
       <div className="w-5/6 bg-custom-black p-[2rem] rounded-3xl h-[30rem]">
@@ -19,7 +18,7 @@ export default function LandingContent() {
       </div>
       <div className="w-5/6 mt-[2rem] flex gap-[3rem]">
         <div className="overflow-hidden w-1/2">
-          <img className="rounded-3xl" src={mainImg.src} alt="" />
+          <img className="rounded-3xl" alt="" />
         </div>
         <div className=" bg-custom-black w-1/2 rounded-3xl p-[4rem] flex flex-col gap-[2.7rem]">
           <p className="text-[3.5rem]">Grand Theft Auto VI</p>
@@ -52,4 +51,6 @@ export default function LandingContent() {
       </div>
     </main>
   );
-}
+};
+
+export default LandingContent;

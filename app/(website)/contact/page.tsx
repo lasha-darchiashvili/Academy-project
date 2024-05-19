@@ -1,15 +1,16 @@
 import React from "react";
-import ContactUs from "./components/ContactUs";
-import ContactInfo from "./components/ContactInfo";
+import ContactUs from "./components/contactUs";
+import ContactInfo from "./components/contactInfo";
 
-export default function Contact() {
+const Contact: React.FC = () => {
   return (
     <div className="grow w-[1000px] mx-auto mt-[4rem]">
       <div className="flex justify-between">
         <ContactUs />
-
         <ContactInfo />
       </div>
     </div>
   );
-}
+};
+
+export default Contact;

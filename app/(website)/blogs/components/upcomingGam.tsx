@@ -2,7 +2,19 @@ import React from "react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
-export default function UpcomingGame({ title, img, text, id }) {
+interface UpcomingGameProps {
+  title: string;
+  img: string;
+  text: string;
+  id: string;
+}
+
+const UpcomingGame: React.FC<UpcomingGameProps> = ({
+  title,
+  img,
+  text,
+  id,
+}) => {
   const { t } = useTranslation();
   return (
     <div className="flex flex-col gap-[2rem] items-center w-full">
@@ -29,4 +41,6 @@ export default function UpcomingGame({ title, img, text, id }) {
       </div>
     </div>
   );
-}
+};
+
+export default UpcomingGame;

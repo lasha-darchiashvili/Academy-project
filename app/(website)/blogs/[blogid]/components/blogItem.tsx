@@ -4,9 +4,20 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
-export default function BlogItem({ id }) {
-  const [blogData, setBlogData] = useState();
-  const [loading, setLoading] = useState(true);
+interface BlogItemProps {
+  id: number;
+}
+
+interface BlogData {
+  title: string;
+  body: string;
+  tags: string[];
+  reactions: number;
+}
+
+const BlogItem: React.FC<BlogItemProps> = ({ id }) => {
+  const [blogData, setBlogData] = useState<BlogData | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -54,7 +65,7 @@ export default function BlogItem({ id }) {
                 {t("tags")}
               </p>
               <div className="flex gap-[1rem] text-[1.4rem]">
-                {blogData.tags.map((item, index) => {
+                {blogData?.tags.map((item, index) => {
                   return (
                     <p
                       key={index}
@@ -85,4 +96,6 @@ export default function BlogItem({ id }) {
       </div>
     );
   }
-}
+};
+
+export default BlogItem;

@@ -4,8 +4,15 @@ import UpcomingGam from "./upcomingGam";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-export default function Upcoming() {
-  const [blogsData, setBlogsData] = useState([]);
+interface Blog {
+  id: number;
+  title: string;
+  body: string;
+}
+
+const Upcoming: React.FC = () => {
+  const [blogsData, setBlogsData] = useState<Blog[]>([]);
+
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -24,11 +31,13 @@ export default function Upcoming() {
     fetchData();
   }, []);
 
+  console.log(blogsData);
+
   return (
     <div className="flex items-center flex-col text-custom-white mt-[4rem] gap-[4rem]">
       <p className="text-custom-white text-[2.4rem]">{t("UpcomingGames")}</p>
       <div className="w-[120rem] flex flex-col gap-[5rem] items-center">
-        {blogsData.map((game) => (
+        {blogsData.map((game: Blog) => (
           <UpcomingGam
             key={game.id}
             id={game.id}
@@ -43,4 +52,6 @@ export default function Upcoming() {
       </div>
     </div>
   );
-}
+};
+
+export default Upcoming;

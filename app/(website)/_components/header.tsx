@@ -10,7 +10,7 @@ import i18n from "../../i18n";
 
 export default function Header() {
   const router = useRouter();
-  const { t, i18n } = useTranslation();
+  const { t, i18n: translation } = useTranslation();
   console.log(i18n.language);
 
   const handleLogout = () => {
