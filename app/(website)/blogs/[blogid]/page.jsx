@@ -1,6 +1,6 @@
 "use server";
 import React from "react";
-import BlogItem from "./components/BlogItem";
+import BlogItem from "./components/blogItem";
 
 export async function generateStaticParams() {
   const posts = await fetch("https://dummyjson.com/posts").then((res) =>

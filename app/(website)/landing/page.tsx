@@ -4,7 +4,6 @@ import Products from "../_components/products";
 import SearchBar from "../_components/searchBar";
 import { useState, useEffect } from "react";
 import useDebounce from "../_hooks/useDebounce";
-import LandingContent from "../_components/landingContent";
 
 interface Product {
   id: string;
