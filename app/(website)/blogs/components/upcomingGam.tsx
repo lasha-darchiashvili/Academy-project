@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
 interface UpcomingGameProps {
@@ -7,6 +6,7 @@ interface UpcomingGameProps {
   img: string;
   text: string;
   id: string;
+  createDate: string;
 }
 
 const UpcomingGame: React.FC<UpcomingGameProps> = ({

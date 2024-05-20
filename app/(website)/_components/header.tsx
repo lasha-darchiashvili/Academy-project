@@ -2,15 +2,13 @@
 import React from "react";
 import Mainlogo from "../../../public/assets/Mainlogo.svg";
 import Link from "next/link";
-import { redirect, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import HeaderButton from "./headerButton";
-import Image from "next/image";
 import { useTranslation } from "react-i18next";
-import i18n from "../../i18n";
 
 export default function Header() {
   const router = useRouter();
-  const { t, i18n: translation } = useTranslation();
+  const { t, i18n } = useTranslation();
   console.log(i18n.language);
 
   const handleLogout = () => {

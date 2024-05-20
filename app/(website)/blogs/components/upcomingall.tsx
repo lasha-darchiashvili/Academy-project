@@ -40,7 +40,7 @@ const Upcoming: React.FC = () => {
         {blogsData.map((game: Blog) => (
           <UpcomingGam
             key={game.id}
-            id={game.id}
+            id={`${game.id}`}
             title={game.title}
             img={
               "https://cdn1.epicgames.com/offer/14ee004dadc142faaaece5a6270fb628/EGS_TheWitcher3WildHuntCompleteEdition_CDPROJEKTRED_S1_2560x1440-82eb5cf8f725e329d3194920c0c0b64f"

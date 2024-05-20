@@ -1,9 +1,9 @@
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
 import "../globals.css";
 import Header from "./_components/header";
 import Footer from "./_components/footer";
-import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
+// import { cookies } from "next/headers";
+// import { redirect } from "next/navigation";
 import React, { ReactNode } from "react";
 
 interface RootLayoutProps {

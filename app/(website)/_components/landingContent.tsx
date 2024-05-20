@@ -1,6 +1,5 @@
 import React from "react";
 import GameStats from "./gameStats";
-import Image from "next/image";
 
 const LandingContent: React.FC = () => {
   return (

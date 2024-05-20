@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
 interface BlogItemProps {

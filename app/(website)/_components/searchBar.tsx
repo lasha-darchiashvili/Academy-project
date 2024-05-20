@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import search from "../../../public/assets/search.svg";
-import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
 interface SearchBarProps {
