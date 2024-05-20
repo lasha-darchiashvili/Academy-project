@@ -5,11 +5,13 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import HeaderButton from "./headerButton";
 import { useTranslation } from "react-i18next";
+import i18n from "../../i18n";
 
 export default function Header() {
   const router = useRouter();
-  const { t, i18n } = useTranslation();
+  const { t, i18n: translation } = useTranslation();
   console.log(i18n.language);
+  console.log(translation.language);
 
   const handleLogout = () => {
     fetch("/api/logout", {
