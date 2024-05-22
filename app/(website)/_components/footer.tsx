@@ -1,9 +1,15 @@
 "use client";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
   const { t } = useTranslation();
+
+  const pathname = usePathname();
+  if (pathname === "/admin") {
+    return;
+  }
   return (
     <footer className=" bg-custom-blue mt-[3rem] text-custom-gray flex justify-center">
       <div className="w-5/6 mt-[2rem]">

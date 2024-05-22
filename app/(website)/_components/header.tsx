@@ -2,7 +2,7 @@
 import React from "react";
 import Mainlogo from "../../../public/assets/Mainlogo.svg";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import HeaderButton from "./headerButton";
 import { useTranslation } from "react-i18next";
 import i18n from "../../i18n";
@@ -12,6 +12,7 @@ export default function Header() {
   const { t, i18n: translation } = useTranslation();
   console.log(i18n.language);
   console.log(translation.language);
+  const pathname = usePathname();
 
   const handleLogout = () => {
     fetch("/api/logout", {
@@ -49,6 +50,10 @@ export default function Header() {
   //     redirect("/login");
   //   }
   // };
+
+  if (pathname === "/admin") {
+    return;
+  }
   return (
     <nav className="flex justify-center h-[10rem] bg-custom-black">
       <div className="flex justify-between items-center w-5/6 text-custom-white font-semibold">
