@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Product from "./product";
 import useLocalStorage from "../_hooks/useLocalStorage";
 
@@ -16,20 +17,28 @@ interface ProductsProps {
 interface SelectedProduct {
   id: number;
   count: number;
+  product: GameData;
 }
 
 const Products: React.FC<ProductsProps> = ({ gameData }) => {
   const [selectedProducts, setSelectedProducts] = useLocalStorage<
     SelectedProduct[]
   >("selectedProducts", []);
-  const [productsSum, setProductsSum] = useLocalStorage<number>("sum", 0);
+  const [productsSum, setProductsSum] = useState<number>(0);
+
+  useEffect(() => {
+    const sum = selectedProducts.reduce((total, obj) => total + obj.count, 0);
+    setProductsSum(sum);
+  }, [selectedProducts]);
 
   console.log(selectedProducts);
   const handleClick = (product: GameData) => {
     let selectedProduct = selectedProducts.find((obj) => obj.id === product.id);
-
     if (!selectedProduct) {
-      setSelectedProducts((prev) => [...prev, { id: product.id, count: 1 }]);
+      setSelectedProducts((prev) => [
+        ...prev,
+        { id: product.id, count: 1, product: product },
+      ]);
     } else {
       setSelectedProducts((prev) =>
         prev.map((obj) =>
@@ -37,8 +46,6 @@ const Products: React.FC<ProductsProps> = ({ gameData }) => {
         )
       );
     }
-    let sum = selectedProducts.reduce((total, obj) => total + obj.count, 0);
-    setProductsSum(sum);
   };
 
   return (
