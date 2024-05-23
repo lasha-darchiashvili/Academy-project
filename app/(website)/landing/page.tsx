@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import useDebounce from "../_hooks/useDebounce";
 
 interface Product {
-  id: string;
+  id: number;
   title: string;
   description: string;
   thumbnail: string;
